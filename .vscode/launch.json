@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug nRF52",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/nr52app/_build/nrf52840_xxaa.out",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "device": "nRF52840_xxAA",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "armToolchainPath": "/home/ms/sdk-toolchains/gcc-arm-none-eabi-9-2020-q2-update/bin",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "rttConfig": {
+                "enabled": true,
+                "address": "auto",
+                "clearSearch": false,
+                "polling": true,
+                "decoders": [
+                    {
+                        "port": 0,
+                        "type": "console"
+                    }
+                ],
+                "retryCount": 20,          // Add this
+                "rttConnectionTimeout": 5,  // Add this
+                "reconnectOnFailure": true  // Add this
+            },
+            "svdFile": "${workspaceFolder}/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52840.svd"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "nRF52840",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/nr52app/inc",
+                "${workspaceFolder}/nr52app/config",
+                "${workspaceFolder}/nr52app/src",
+                "${workspaceFolder}/nRF5_SDK_17.1.0_ddde560/components/**",
+                "${workspaceFolder}/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk",
+                "${workspaceFolder}/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include",
+                "${workspaceFolder}/nRF5_SDK_17.1.0_ddde560/modules/nrfx/hal",
+                "${workspaceFolder}/nRF5_SDK_17.1.0_ddde560/components/libraries/util",
+                "${workspaceFolder}/nRF5_SDK_17.1.0_ddde560/components/libraries/log/src"
+            ],
+            "defines": [
+                "USE_APP_CONFIG",
+                "BOARD_PCA10056",
+                "BSP_DEFINES_ONLY",
+                "CONFIG_GPIO_AS_PINRESET",
+                "FLOAT_ABI_HARD",
+                "NRF52840_XXAA",
+                "__HEAP_SIZE=8192",
+                "__STACK_SIZE=8192"
+            ],
+            "compilerPath": "/home/ms/sdk-toolchains/gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
